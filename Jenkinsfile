@@ -40,12 +40,20 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                input "Deploy?"
-                milestone(30)  // Abort all older builds that didn't get here
+                input "Deploy!"
+                // milestone(30)  // Abort all older builds that didn't get here
                 echo 'deploy to artifactory'
                 echo 'deploy on test server'
             }
         }
+        stage ('script') {
+            steps {
+                script {
+                    def pipelineType = 'declarative'
+                        echo "yeah we executed a script within the ${pipelineType} pipeline"
+                }
+            }
+        }        
     }
     post {
         always {
