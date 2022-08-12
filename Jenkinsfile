@@ -1,4 +1,4 @@
-@Library('jenkins-techlab-exercise-library') _
+@Library('jenkins-techlab-training-lib') _
 
 pipeline {
     agent any
