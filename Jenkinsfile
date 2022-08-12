@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh """#!/bin/bash +x
-                    source \${HOME}/.nvm/nvm.sh
+                    source \${NVM_HOME}/.nvm/nvm.sh
                     nvm install 4
                     node --version
                 """
