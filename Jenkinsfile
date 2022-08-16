@@ -14,6 +14,9 @@ pipeline {
         OPENSHIFT_CLUSTER = 'my-cluster'
         OPENSHIFT_CREDENTIALS = 'openshift-jenkins-external'
         OPENSHIFT_PROJECT = 'jenkins-external'
+        LC_ALL = 'en_US.UTF-8'
+        LANG = 'en_US.UTF-8'
+        LANGUAGE = 'en_US.UTF-8'
     }
     stages {
         stage('oc test') {
